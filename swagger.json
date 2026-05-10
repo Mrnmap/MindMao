@@ -1,7 +1,20 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<svg/onload=alert(1)>",
-    "description": "<img src=x onerror=alert(1)>"
+    "title": "XSS Test",
+    "version": "1.0",
+    "description": "<script>alert(document.cookie)</script>"
+  },
+  "paths": {
+    "/xss": {
+      "get": {
+        "summary": "XSS Test",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
   }
 }
